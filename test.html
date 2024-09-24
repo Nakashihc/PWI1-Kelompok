@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .search-container {
+            text-align: center;
+        }
+
+        #search-box {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007AFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #search-results {
+            margin-top: 20px;
+        }
+
+        .result-image {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-box" placeholder="Enter your search...">
+        <button id="search-button" onclick="search()">Search</button>
+        <div id="search-results"></div>
+    </div>
+
+    <script>
+        function search() {
+            var searchTerm = document.getElementById("search-box").value;
+            var resultsContainer = document.getElementById("search-results");
+
+            // Perform search logic here
+            if (searchTerm.toLowerCase() === "ayii") {
+                displayImages(["gambar1.png", "gambar2.png"]);
+            } else if (searchTerm.toLowerCase() === "denis") {
+                displayImages(["gambar3.png", "gambar4.png"]);
+            } else {
+                resultsContainer.innerHTML = "No results found for '" + searchTerm + "'";
+            }
+        }
+
+        function displayImages(images) {
+            var resultsContainer = document.getElementById("search-results");
+            resultsContainer.innerHTML = "";
+
+            images.forEach(function(imageSrc) {
+                var imageElement = document.createElement("img");
+                imageElement.src = imageSrc;
+                imageElement.alt = "Result Image";
+                imageElement.classList.add("result-image");
+                resultsContainer.appendChild(imageElement);
+            });
+        }
+    </script>
+</body>
+</html>

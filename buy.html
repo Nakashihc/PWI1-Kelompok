@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="buystyle.css">
+    <title>Company Profle</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img id="logoImage" src="logo.png" alt="Company Logo">
+        </div>
+        <ul>
+            <li class="login"><a href="login.html">Log in</a></li>
+        </ul>
+    </div>
+
+    <div class="animate-on-scroll">
+        <div class="paket-text">
+            <h2>Pilih Paket yang anda inginkan</h2>
+        </div>
+    </div>
+
+    <div class="pilihan-paket">
+        <div class="animate-on-scroll">
+            <div class="paket">
+                <div class="paket-card" id="paket-basic">
+                    <h3>Paket Basic</h3>
+                    <div class="garis"></div>
+                    <h2>Rp. 50.000</h2>
+                    <h5>IDR/Bulan</h5>
+                    <p>Perpanjang paket dengan harga Rp.100.000/bln pada 29/05/2024</p>
+                </div>
+                <div class="paket-card" id="paket-rekomendasi">
+                    <h3>Paket Rekomendasi</h3>
+                    <div class="garis"></div>
+                    <h2>Rp 90.000</h2>
+                    <h5>IDR/Bulan</h5>
+                    <p>Perpanjang paket dengan harga Rp.200.000/bln pada 29/05/2024</p>
+                </div>
+                <div class="paket-card" id="paket-vip">
+                    <h3>Paket VIP</h3>
+                    <div class="garis"></div>
+                    <h2>Rp. 105.000</h2>
+                    <h5>IDR/Bulan</h5>
+                    <p>Perpanjang paket dengan harga Rp.300.000/bln pada 29/05/2024</p>
+                </div>
+            </div>
+        </div>
+        <div class="proses-paket">
+            <div class="proses-card">
+                <h3>Pilih Paket Bisnis</h3>
+                <div class="info-proses">
+                    <img src="order/Order 1.png" alt="">
+                </div>
+                <div class="garis-order"></div>
+                <h2 id="paketText">Paket Basic</h2>
+                <div class="perhitungan">
+                    <p>Diskon 50%</p>
+                    <div class="harga-diskon">
+                        <h6>Rp. 50.000,00</h6>
+                        <p id="harga-diskon-p">Rp. 100.000,00</p>
+                    </div>
+                </div>
+                <div class="perhitungan">
+                    <p>PPN</p>
+                    <p style="margin-left: 143px; text-align: right;">Rp. 15.000,00</p>
+                </div>
+                <img src="order/garsputs.png" alt="" style="width: 280px;">
+                <div class="Total">
+                    <h6>Total</h6>
+                    <p style="margin-left: 115px; font-size: 20px;">Rp. 65.000,00</p>
+                </div>
+            </div>
+            <div class="tombol">
+                <h5><a id="selanjutnyaButton" href="#" onclick="gotoSelectedPackage()">Lanjutkan</a></h5>
+            </div>
+            <img src="order/daftarrr.png" alt="" style="height: 208px;">
+        </div>
+    </div>
+
+    <div class="spasi"></div>
+
+    <footer class="footer" id="contact">
+        <div class="footer-kiri">
+            <h1>Bisnis Ayii</h1>
+            <p>Bandung, Jawa Barat, Indonesia</p>
+            <br><br><br><br>
+            <p>Company Portfolio &copy; 2023</p>
+        </div>
+
+        <div class="footer-kanan">
+            <div class="social-media">
+                <h2>Social Media</h2>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+                <h2>Other</h2>
+                <ul>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function isElementHalfInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            return (
+                rect.top >= -rect.height / 1 &&
+                rect.bottom <= windowHeight + rect.height / 1
+            );
+        }
+
+        // Fungsi animasi saat tampil
+        function animateOnScroll() {
+            const animatedElements = document.querySelectorAll(".animate-on-scroll");
+
+            animatedElements.forEach((element) => {
+                if (isElementHalfInViewport(element)) {
+                    element.classList.add("animation-up");
+                }
+            });
+        }
+
+        // Panggil fungsi Scroll
+        document.addEventListener("DOMContentLoaded", animateOnScroll);
+        window.addEventListener("scroll", animateOnScroll);
+
+        // Fungsi Klik Card
+        // Fungsi Klik Card
+        document.addEventListener("DOMContentLoaded", function () {
+            const paketCards = document.querySelectorAll(".paket-card");
+
+            // Tambahkan kelas 'active' pada elemen pertama
+            paketCards[0].classList.add("active");
+
+            paketCards.forEach(card => {
+                card.addEventListener("click", function () {
+                    paketCards.forEach(card => {
+                        card.classList.remove("active");
+                    });
+                    card.classList.add("active");
+                });
+            });
+        });
+
+
+        // Berubah Paket Basic
+        document.addEventListener("DOMContentLoaded", function () {
+            const paketBasic = document.getElementById("paket-basic");
+            const paketRekomendasi = document.getElementById("paket-rekomendasi");
+            const paketVIP = document.getElementById("paket-vip");
+            const prosesPaket = document.querySelector(".proses-paket h2");
+            const perhitungan = document.querySelector(".perhitungan p");
+            const Total = document.querySelector(".Total p");
+            const hargadiskon = document.querySelector(".harga-diskon h6");
+            const hargaDiskonP = document.getElementById("harga-diskon-p");
+
+            // Pencet Paket Text Berubah
+            paketBasic.addEventListener("click", function () {
+                prosesPaket.textContent = "Paket Basic";
+                perhitungan.textContent = "Diskon 50%";
+                hargadiskon.textContent = "Rp. 50.000,00";
+                Total.textContent = "Rp. 65.000,00";
+                hargaDiskonP.textContent = "Rp. 100.000,00";
+            });
+
+            paketRekomendasi.addEventListener("click", function () {
+                prosesPaket.textContent = "Paket Rekomendasi";
+                perhitungan.textContent = "Diskon 55%";
+                hargadiskon.textContent = "Rp 90.000,00";
+                Total.textContent = "Rp. 105.000,00";
+                hargaDiskonP.textContent = "Rp. 200.000,00";
+            });
+
+            paketVIP.addEventListener("click", function () {
+                prosesPaket.textContent = "Paket VIP";
+                perhitungan.textContent = "Diskon 65%";
+                hargadiskon.textContent = "Rp 150.000,00";
+                Total.textContent = "Rp. 165.000,00";
+                hargaDiskonP.textContent = "Rp. 300.000,00";
+            });
+        });
+
+        // Selanjutnya Sesuai Paket
+        function gotoSelectedPackage() {
+            const prosesPaket = document.querySelector(".proses-paket h2");
+
+            if (prosesPaket.textContent === "Paket Basic") {
+                window.location.href = "paketbasic.html"; // Ganti URL_PAKET_BASIC dengan URL paket Basic
+            } else if (prosesPaket.textContent === "Paket Rekomendasi") {
+                window.location.href = "paketrekomendasi.html"; // Ganti URL_PAKET_REKOMENDASI dengan URL paket Rekomendasi
+            } else if (prosesPaket.textContent === "Paket VIP") {
+                window.location.href = "paketvip.html"; // Ganti URL_PAKET_VIP dengan URL paket VIP
+            } else {
+                // Tindakan default jika tidak ada paket yang dipilih
+                alert("Pilih paket terlebih dahulu");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

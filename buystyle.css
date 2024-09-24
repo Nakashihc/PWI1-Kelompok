@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+.spasi {
+    padding: 15px;
+}
+
+.garis {
+    margin: 20px 20px;
+    padding: 2px 0 0 0;
+    background-color: #D0DCF3;
+}
+
+/* Ini Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2195f3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 100px;
+}
+
+.logo img {
+    max-width: 30px;
+    padding: 10px 100px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0 200px;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 35px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    transition: background-color 0.5s ease;
+}
+
+/* Paket */
+.paket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transform: translate(-3%, 0%);
+}
+.paket-text {
+    margin: 50px 0px 0 200px;
+}
+/* Kartu Paket */
+.pakeet h2{
+    margin: 50px 0;
+    text-align: center;
+}
+.paket-card {
+    cursor: pointer; 
+    width: 258px;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    margin: 10px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
+    transition: 0.5s ease;
+}
+
+.paket-card h5{
+    margin: 20px 0;
+    font-size: 15px;
+    color: #8d8d8d;
+}
+
+.paket-card p{
+    color: #3a416660;
+}
+
+
+.paket-card.active {
+    background-color: #007AFF;
+    transform: translate(0%, -4%);
+    color: #fff;
+}
+
+.paket-card.active h2,
+.paket-card.active p,
+.paket-card.active h5 {
+    color: #fff;
+}
+
+
+.paket-card img{
+    max-width: 150px;
+}
+
+.paket-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.paket-card h2 {
+    margin: 0px 0;
+    font-size: 30px;
+    color: #FF9800;
+    text-align: center;
+}
+
+.paket-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Pilihan Paket */
+.pilihan-paket{
+    display: flex;
+    margin: 0 200px;
+}
+
+.proses-paket{
+    margin-left: 125px;
+}
+
+.proses-card {
+    width: 295px;
+    border: 1px solid #e4e4e4;
+    height: 490px;
+    padding: 20px 32px;
+    margin: 10px 20px;
+    text-align: left;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
+}
+.proses-card h3{
+    margin: 20px 0;
+}
+
+.garis-order {
+    margin: 10px 0;
+    padding: 2px 0 0 0;
+    background-color: #D0DCF3;
+}
+
+/* Penghitung */
+.perhitungan{
+    display: flex;
+    margin: 5px 0;
+}
+
+.Total{
+    display: flex;
+    margin: 5px 0;
+}
+
+.Total h6{
+    font-size: 15px;
+}
+
+.harga-diskon{
+    display: block;
+    margin-left: 90px;
+}
+.harga-diskon h6{
+    font-size: 15px;
+    margin: 0;
+}
+
+.harga-diskon p{
+    text-decoration: line-through; 
+    color: #00000080;
+}
+
+/* Tombol */
+.tombol{
+    margin: 50px 20px 30px 22px;
+    text-align: center;
+}
+.tombol a{
+    text-decoration: none;
+    color: #fff;
+    padding: 17px 140px;
+    background-color: #007AFF;
+    border-radius: 50px;
+    transition: 0.5s ease;
+    border: 1px solid #007AFF;
+}
+.tombol a:hover{
+    color: #007AFF;
+    background-color: #fff;
+    border: 1px solid #007AFF;
+    transition: 0.5s ease;
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #002E5A;
+    padding: 40px 0;
+    margin: 0 30px;
+    text-align: left;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid #00000041 2px;
+}
+
+.footer-kiri {
+    margin-left: 300px;
+}
+
+.footer-kiri h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-kiri p {
+    margin: 10px 0;
+}
+
+.footer-kanan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-media {
+    position: relative;
+    margin-right: 600px;
+}
+
+.social-media h2 {
+    font-size: 16px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 10px 0;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: #002E5A;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animate-on-scroll.animation-up {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url(gambar/Loginbg.png);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        h2, form, p{
+            font-family: 'Inter', sans-serif;
+        }
+        .login-container {
+            margin: 0 0px 0 150px;
+            position: relative;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container img {
+            object-fit: cover;
+            max-width: 100%;
+            height: 400px;
+        }
+
+        .loginnn {
+            background-color: #0089fa96;
+            top: 50%;
+            padding: 50px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .loginnn h2 {
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            background-color: #ffffff;
+            padding: 10px 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: rgb(151, 151, 151);
+            width: 300px;
+        }
+
+        button {
+            padding: 15px 25px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            border: solid #fff 0.5px;
+            transition: 0.4s ease;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="loginnn">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username :</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "Ayii" && password === "12345") {
+                alert("Login berhasil!");
+                window.location.href = "index.html";
+            } else {
+                alert("Login gagal. Silakan coba lagi.");
+            }
+        });
+    </script>
+</body>
+
+</html>

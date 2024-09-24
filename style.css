@@ -1,0 +1,596 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+.spasi {
+    padding: 15px;
+}
+
+.garis {
+    margin: 35px 20px;
+    padding: 1px 0 0 0;
+    background-color: #D0DCF3;
+}
+
+/* Ini Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2195f3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 88px;
+    box-shadow: 0 4px 7cap 0 #00000050;
+}
+
+.logo img {
+    max-width: 40px;
+    padding: 10px 20px;
+    margin-left: 50px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.navbar li {
+    float: left; 
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-right: 50px;
+    transition: background-color 0.5s ease;
+}
+
+.navbar.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 4px 7px 0 #00000050;
+}
+
+.navbar.scrolled a {
+    color: #000000; 
+}
+
+.login a {
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    margin-right: 50px;
+}
+
+.navbar.scrolled .login a {
+    border: 2px solid #000000;
+    transition: 0.5s ease;
+}
+
+.navbar.scrolled .login a:hover {
+    color : #000000b2;
+    border: 2px solid #000000b2;
+    transition: 0.5s ease;
+}
+
+.login a:hover {
+    color: #ffffff65;
+    border: 2px solid #2c2c2c65;
+    transition: 0.3s ease;
+}
+
+.login a.scrolled {
+    color: #000000; 
+    transition: 0.5s ease;
+    border: 2px solid #000000;
+}
+
+
+/* Ini Gambar Bawah Navbar */
+.image-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.image-content {
+    position: absolute;
+    top: 50%;
+    left: 65px;
+    transform: translate(0, -50%);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 750px;
+}
+
+.image-content h1 {
+    font-size: 40px;
+}
+
+.image-content p {
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: #82D96E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45A049;
+}
+
+/* 3 Foto Experience */
+.Experience {
+    position: relative;
+    transform: translate(0%, -20%);
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+    z-index: 2;
+    margin: 0 80px 0px 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gambar-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-gambar {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+}
+
+.item-gambar img {
+    max-width: 450px;
+    height: auto;
+    transition: 0.5s ease;
+}
+
+.item-gambar img:hover {
+    transform: scale(1.3);
+}
+
+.text-gambar {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    color: white;
+    padding: 10px 0 20px 0;
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 10px 15px;
+    width: 100%;
+}
+
+.item-gambar h3 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.item-gambar p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Ini adalah Pengalaman Perusahaan */
+.perusahaan {
+    display: flex;
+    align-items: center;
+    margin: 0 120px;
+    color: #002E5A;
+}
+
+.perusahaan-content {
+    flex: 1;
+    text-align: left;
+}
+
+.perusahaan-content .garis {
+    border-bottom: solid #7AA2F0 2px;
+    transform: translate(-20px, -20px);
+}
+
+.perusahaan-content h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.perusahaan-content p {
+    font-size: 15px;
+    transform: translate(0, -30px);
+}
+
+.gambar-perusahaan {
+    flex: 1;
+    text-align: right;
+}
+
+.gambar-perusahaan img {
+    max-height: 600px;
+    margin: 0 200px 0 0;
+    transform: translate(0, 4px);
+}
+
+
+/* Foto Orang Kelompok */
+.fotokelp {
+    background-color: #00000007;
+}
+
+.kelompok {
+    text-align: center;
+    color: #000000;
+    padding: 30px 20px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.kelompok h2 {
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.fotonya {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.fotto {
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.fotto img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.13), 1px 6px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+.fotto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.fotto p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* 3 CARD */
+.bayar {
+    text-align: center;
+    margin: 60px 0;
+    color: #000;
+}
+
+.bayar h3 {
+    color: #2196F3;
+}
+
+.card-baris {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 100px 400px 100px 400px;
+}
+
+.card {
+    flex: 1;
+    border-radius: 5px;
+    padding: 30px 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.089), 0 6px 20px 0 rgba(0, 0, 0, 0.089);
+}
+
+.garis-card {
+    background-color: #fff;
+    margin: 0 20px;
+    padding: 1px;
+}
+
+.garis-card1 {
+    background-color: #2196F3;
+    margin: 0 20px;
+    padding: 1px;
+}
+
+.card-2 {
+    transform: translate(0, -40px);
+    color: #fff;
+    font-size: 14px;
+    background-color: #2196F3;
+    flex: 1;
+    border-radius: 5px;
+    padding: 30px 40px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.089), 0 6px 20px 0 rgba(0, 0, 0, 0.089);
+}
+
+.uang {
+    transform: translate(-20px, 0);
+    border-radius: 0px 20px 20px 0;
+    text-align: left;
+    background-color: #2196F3;
+    padding: 1px 40px;
+    color: #fff;
+}
+
+.uang-penting {
+    transform: translate(-40px, 0);
+    border-radius: 0px 20px 20px 0;
+    text-align: left;
+    background-color: #fff;
+    padding: 1px 50px;
+    color: #2196F3;
+}
+
+.uang h3 {
+    font-size: 30px;
+}
+
+.uang-penting h3 {
+    font-size: 30px;
+}
+
+.card h2 {
+    font-size: 24px;
+}
+
+.card-2 h2 {
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px 20px;
+}
+
+.card-2 p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px 20px;
+}
+
+.buy-button-1 {
+    text-align: center;
+    margin-top: 300px;
+}
+
+.buy-button-2 {
+    text-align: center;
+    margin-top: 265px;
+}
+
+.buy-button-3 {
+    text-align: center;
+    margin-top: 210px;
+}
+
+.buy-button-1 a {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #2196F3;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: solid 1px #2196F3;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button-2 a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #2196F3;
+    color: #fff;
+    border: solid 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button-3 a {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #2196F3;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: solid #2196F3 1px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button-1 a:hover {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.buy-button-2 a:hover {
+    background-color: #ffffff;
+    color: #2196F3;
+}
+
+.buy-button-3 a:hover {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+/* Review Orang */
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Kartu Review */
+.reviews h2{
+    margin: 50px 0;
+    text-align: center;
+}
+.review-card {
+    width: 400px;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    margin: 10px 20px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+.review-card:hover{
+    transform: translate(0%, -4%);
+}
+.gamflex{
+    display: flex;
+}
+
+.gamflex img {
+    align-items: center;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.review-card img{
+    max-width: 150px;
+}
+
+.review-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.review-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+/* 4 Logo dan Title */
+.barislogo {
+    padding: 50px 50px;
+    text-align: center;
+    color: white;
+    background-image: url(gambar/Bggg.png);
+
+}
+
+.emplogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 75px 35px 75px;
+}
+
+.emplogo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.barislogo h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #002E5A;
+    padding: 40px 0;
+    margin: 0 30px;
+    text-align: left;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid #00000041 2px;
+}
+
+.footer-kiri {
+    margin-left: 300px;
+}
+
+.footer-kiri h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-kiri p {
+    margin: 10px 0;
+}
+
+.footer-kanan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-media {
+    position: relative;
+    margin-right: 600px;
+}
+
+.social-media h2 {
+    font-size: 16px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 10px 0;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: #002E5A;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animate-on-scroll.animation-up {
+    opacity: 1;
+    transform: translateY(0);
+}

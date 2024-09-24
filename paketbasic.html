@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="paket.css">
+    <title>Paket Basic</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <ul>
+            <li><a class="active" href="login.html">Log in</a></li>
+        </ul>
+    </div>
+
+    <div class="animate-on-scroll">
+        <div class="paket-text">
+            <h2>Isi Data Diri dan Bisnis</h2>
+        </div>
+    </div>
+
+    <div class="biodata">
+        <div class="animate-on-scroll">
+            <div class="data-card">
+                <form action="" method="post">
+                    <div class="namacard">
+                        <input type="text" id="namadpn" name="namadpn" required placeholder="Nama depan">
+
+                        <input type="text" id="namablkg" name="namablkg" required placeholder="Nama belakang"><br>
+                    </div>
+                    <div class="inppanjang">
+                        <input type="text" id="nomortlp" name="nomortlp" required placeholder="Nomor Telpon"><br>
+
+                        <select id="negara" name="negara" required>
+                            <option value="">--- Negara ---</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Filipina">Filipina</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Singapura">Singapura</option>
+                            <option value="Rusia">Rusia</option>
+                            <option value="Bekasi">Bekasi</option>
+                        </select>
+                    </div>
+                    <div class="namacard">
+                        <input type="text" id="kabupaten" name="kabupaten" required placeholder="Kabupaten/Provinsi">
+                        <input type="text" id="kota" name="kota" required placeholder="Kota"><br>
+                    </div>
+
+                    <div class="namacard">
+                        <input type="text" id="alamat" name="alamat" required placeholder="Alamat">
+                        <input type="text" id="kodepos" name="kodepos" required placeholder="Kodepos"><br>
+                    </div>
+                </form>
+            </div>
+            <div class="domain">
+                <div class="buttondomain">
+                    <button id="button1" class="button" onclick="toggleButtons(this)">
+                        <h4>Gunakan Domain Custom</h4>
+                    </button>
+                    <button id="button2" class="button" onclick="toggleButtons(this)">
+                        <h4>Gunakan Domain Standar</h4>
+                    </button>
+                </div>
+                <br>
+                <div class="domainpilih">
+                    <div class="domaincustom">
+                        <input type="text" id="domainn_custom" name="domainn" required
+                            placeholder="Masukkan Domain Anda">
+                    </div>
+                    <div class="domainstandar">
+                        <input type="text" id="domainn_standar" name="domainn" required
+                            placeholder="Masukkan Domain Anda">
+                        <select id="domain_standar" name="domain" required>
+                            <option value=".com">.com</option>
+                            <option value=".id">.id</option>
+                            <option value=".ac.id">.ac.id</option>
+                            <option value=".net">.net</option>
+                            <option value=".org">.org</option>
+                            <option value=".sch.id">.sch.id</option>
+                            <option value=".site">.site</option>
+                            <option value=".info">.info</option>
+                            <option value=".online">.online</option>
+                        </select>
+                    </div>
+                    <p>* Daftar domain gratis: .com, .id, .ac.id, .net, .org, .sch.id, .site, .info, .online</p>
+                </div>
+            </div>
+        </div>
+        <div class="proses-paket">
+            <div class="proses-card">
+                <h3>Pilih Paket Bisnis</h3>
+                <div class="info-proses">
+                    <img src="order/Order 2.png" alt="">
+                </div>
+                <div class="garis-order"></div>
+                <h2 id="paketText">Pilih Paket Anda</h2>
+                <div class="perhitungan">
+                    <p>Diskon 50%</p>
+                    <div class="harga-diskon">
+                        <h6>Rp 50.000,00</h6>
+                        <p id="harga-diskon-p">Rp 100.000,00</p>
+                    </div>
+                </div>
+                <div class="perhitungan">
+                    <p>PPN</p>
+                    <p style="margin-left: 143px; text-align: right;">Rp 15.000,00</p>
+                </div>
+                <img src="order/garsputs.png" alt="" style="width: 280px;">
+                <div class="Total">
+                    <h6>Total</h6>
+                    <p style="margin-left: 115px; font-size: 20px;">Rp. 65.000,00</p>
+                </div>
+            </div>
+            <div class="tombol">
+                <h5><a id="selanjutnyaButton" href="#">Lanjutkan</a></h5>
+            </div>
+            <img src="order/daftarrr.png" alt="" style="height: 208px;">
+        </div>
+    </div>
+
+    <div class="spasi"></div>
+
+    <footer class="footer">
+        <div class="footer-kiri">
+            <h1>Bisnis Ayii</h1>
+            <p>Bandung, Jawa Barat, Indonesia</p>
+            <br><br><br><br>
+            <p>Company Portfolio &copy; 2023</p>
+        </div>
+
+        <div class="footer-kanan">
+            <div class="social-media">
+                <h2>Social Media</h2>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+                <h2>Other</h2>
+                <ul>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll
+        function isElementHalfInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            return (
+                rect.top >= -rect.height / 1 &&
+                rect.bottom <= windowHeight + rect.height / 1
+            );
+        }
+
+        // Animasi Muncul
+        function animateOnScroll() {
+            const animatedElements = document.querySelectorAll(".animate-on-scroll");
+
+            animatedElements.forEach((element) => {
+                if (isElementHalfInViewport(element)) {
+                    element.classList.add("animation-up");
+                }
+            });
+        }
+
+        // Panggil Scroll
+        document.addEventListener("DOMContentLoaded", animateOnScroll);
+        window.addEventListener("scroll", animateOnScroll);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Panggil fungsi untuk membuat animasi muncul pada scroll
+            animateOnScroll();
+
+            // Aktifkan tombol "Gunakan Domain Custom" secara otomatis
+            var customDomainButton = document.getElementById('button1');
+            toggleButtons(customDomainButton);
+        });
+
+
+        // Domain Button
+        // Pada bagian toggleButtons
+        function toggleButtons(clickedButton) {
+            var buttons = document.querySelectorAll('.button');
+
+            buttons.forEach(function (button) {
+                button.classList.remove('button-clicked');
+            });
+
+            clickedButton.classList.add('button-clicked');
+
+            // Tampilkan/hide elemen sesuai dengan tombol yang diklik
+            var domainCustom = document.querySelector('.domaincustom');
+            var domainStandar = document.querySelector('.domainstandar');
+
+            if (clickedButton.id === 'button1') {
+                // Tombol "Gunakan Domain Custom" diklik
+                domainCustom.style.display = 'block';
+                domainStandar.style.display = 'none';
+            } else if (clickedButton.id === 'button2') {
+                // Tombol "Gunakan Domain Standar" diklik
+                domainCustom.style.display = 'none';
+                domainStandar.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
